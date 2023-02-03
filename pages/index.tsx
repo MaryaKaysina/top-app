@@ -10,6 +10,8 @@ function Home({ menu, firstCategory }: IHomeProps) {
   const [rating, setRating] = useState<number>(4);
   const [counter, setCounter] = useState<number>(0);
 
+  console.log(menu);
+  console.log(firstCategory);
   return (
     <>
       <Title>Курсы по Photoshop</Title>

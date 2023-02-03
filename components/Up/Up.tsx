@@ -1,6 +1,4 @@
-import cn from 'classnames';
 import styles from './Up.module.css';
-import ArrowIcon from './arrow.svg';
 import { useScrollY } from '../../hooks/useScrollY';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';

@@ -1,16 +1,18 @@
 import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import { AppProps } from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
+import React from 'react';
+import Router from 'next/router';
 import ym from 'react-yandex-metrika';
 import { YMInitializer } from 'react-yandex-metrika';
 
-export default function App({ Component, pageProps, router }: AppProps) {
-  router.events.on('routeChangeComplete', (url: string) => {
-    if (typeof window !== 'undefined') {
-      ym('hit', url);
-    }
-  });
+Router.events.on('routeChangeComplete', (url: string) => {
+  if (typeof window !== 'undefined') {
+    ym('hit', url);
+  }
+});
 
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -22,8 +24,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <link key={1} rel="icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       <YMInitializer 
         accounts={[]} 
