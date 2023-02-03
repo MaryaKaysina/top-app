@@ -1,0 +1,71 @@
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: left;
+  gap: 20px;
+  margin-bottom: 21px;
+}
+
+.products,
+.hhdata {
+  margin-bottom: 50px;
+}
+
+.advantages,
+.seoText {
+  margin-bottom: 30px;
+}
+
+.hhTitle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: left;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.advantages h2 {
+  margin-bottom: 27px;
+}
+
+.tags h2 {
+  margin-bottom: 20px;
+}
+
+.tag:not(:last-child) {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.seoText h1 {
+  margin: 15px 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 35px;
+}
+.seoText h2 {
+  margin: 15px 0;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+}
+.seoText h3 {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+}
+.seoText h4 {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+@media (max-width: 975px) {
+  .title {
+    grid-template-columns: auto 1fr;
+  }
+}

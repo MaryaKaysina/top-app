@@ -1,0 +1,9 @@
+.up {
+  position: fixed;
+  bottom: 75px;
+  right: 30px;
+}
+
+.up:hover {
+  opacity: 1!important;
+}

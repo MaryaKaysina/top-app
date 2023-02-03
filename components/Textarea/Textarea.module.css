@@ -1,0 +1,43 @@
+.textareaBlock {
+  position: relative;
+  height: 76px;
+  width: 100%;
+}
+
+.textarea {
+  height: 100%;
+  width: 100%;
+  padding: 7px 15px;
+  color: var(--black);
+  background: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border .3s ease-in-out;
+}
+
+.textarea:focus {
+  outline-color: var(--primary);
+}
+
+.textarea::placeholder,
+.textarea:placeholder-shown {
+  color: var(--gray);
+}
+
+.error {
+  border: 1px solid var(--red);
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--red);
+}
+
+
