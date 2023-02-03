@@ -1,32 +1,36 @@
 .header {
-  display: none;
-  grid-template-columns: 1fr 40px;
-  gap: 10px;
-  margin: 25px;
-  margin-bottom: 0;
+	display: none;
+	grid-template-columns: 1fr 40px;
+	gap: 10px;
+
+	margin: 25px;
+	margin-bottom: 0;
 }
 
 .mobileMenu {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 25px;
-  overflow-y: scroll;
-  background: var(--bg);
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	overflow-y: scroll;
+
+	padding: 25px;
+
+	background: var(--bg);
 }
 
 .menuClose {
-  position: fixed;
-  z-index: 200;
-  top: 25px;
-  right: 25px;
+	position: fixed;
+	z-index: 200;
+	top: 25px;
+	right: 25px;
 }
 
 @media (max-width: 765px) {
-  .header {
-    display: grid;
-  }
+	.header {
+		display: grid;
+	}
 }

@@ -1,28 +1,35 @@
 .title--h1 {
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 35px;
+	margin: 0;
+	padding: 0;
+
+	font-size: 26px;
+	font-weight: 500;
+	line-height: 35px;
 }
+
 .title--h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 30px;
+	margin: 0;
+	padding: 0;
+
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 30px;
 }
+
 .title--h3 {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 27px;
+	margin: 0;
+	padding: 0;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
 }
+
 .title--h4 {
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
+	margin: 0;
+	padding: 0;
+
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
 }

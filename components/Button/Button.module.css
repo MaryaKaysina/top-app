@@ -1,61 +1,65 @@
 .btn {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background: transparent;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
+	padding: 10px;
+
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	border: none;
+	border-radius: 5px;
+	background: transparent;
+
+	font-size: 14px;
 }
 
 .primary {
-  color: var(--white);
-  background: var(--primary);
+	color: var(--white);
+	background: var(--primary);
 }
 
 .ghost {
-  color: var(--black);
-  border: 1px solid var(--gray-light);
+	color: var(--black);
+	border: 1px solid var(--gray-light);
 }
 
 .ghost svg {
-  transition: all .3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .arrow {
-  margin-left: 10px;
-  transition: all .3s ease-in-out;
+	margin-left: 10px;
+
+	transition: all 0.3s ease-in-out;
 }
 
 .down svg {
-  transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .right svg {
-  transform: rotate(0);
+	transform: rotate(0);
 }
 
 .primary svg {
-  fill: var(--white);
+	fill: var(--white);
 }
 
 @media (min-width: 1024px) {
-  .primary:hover {
-    background: var(--primary-hover);
-  }
-  
-  .ghost:hover {
-    border: 1px solid var(--primary);
-  }
+	.primary:hover {
+		background: var(--primary-hover);
+	}
 
-  .ghost:hover svg {
-    fill: var(--primary);
-  }
+	.ghost:hover {
+		border: 1px solid var(--primary);
+	}
+
+	.ghost:hover svg {
+		fill: var(--primary);
+	}
 }
 
 @media (max-width: 420px) {
-  .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+	.btn {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 }
