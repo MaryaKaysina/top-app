@@ -5,11 +5,41 @@ import { IMenuItem } from '../../interfaces/menu.interface';
 import { firstLevelMenu } from '../../helpers/helper';
 import { ParsedUrlQuery } from 'querystring';
 import { API } from '../../helpers/api';
+import styles  from './type.module.css';
+import { Title, Text } from '../../components';
+import { Error404 } from '../404';
+import Link from 'next/link';
 
-function Type({ firstCategory }: ITypeProps) {
+function Type({ firstCategory, menu, firstCategoryName, firstCategoryRoute }: ITypeProps) {
+
+  console.log(firstCategoryName);
+  console.log(menu);
+  console.log(firstCategory);
+
+  if (!menu || !firstCategoryName) {
+    return <Error404/>;
+  }
+
   return (
     <>
-      <p>Type: {firstCategory}</p>
+      <Title className={styles.title}>{firstCategoryName}</Title>
+      <Text size='sm' className={styles.text}>Подборки лучших курсов и рейтинги, основанные на реальных отзывах.</Text>
+      <ul className={styles.list}>
+      {menu.map(item => (
+        <li key={item._id.secondCategory} className={styles.item}>
+          <span className={styles.itemName}>{item._id.secondCategory}</span>
+          <div className={styles.linksBlock}>
+            {item.pages.map(page => (
+              <span key={page._id} className={styles.itemLink}>
+                <Link href={`/${firstCategoryRoute}/${page.alias}`}legacyBehavior>
+                  {page.title}
+                </Link>
+              </span> 
+            ))}
+          </div>
+        </li>
+      ))}
+      </ul>
     </>
   );
 }
@@ -26,6 +56,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 interface ITypeProps extends Record<string, unknown> {
   menu: IMenuItem[];
   firstCategory: number;
+  firstCategoryName: string;
+  firstCategoryRoute: string;
 }
 
 export const getStaticProps: GetStaticProps<ITypeProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
@@ -48,7 +80,9 @@ export const getStaticProps: GetStaticProps<ITypeProps> = async ({ params }: Get
   return {
     props: {
       menu,
-      firstCategory: firstCategoryItem.id
+      firstCategory: firstCategoryItem.id,
+      firstCategoryName: firstCategoryItem.name,
+      firstCategoryRoute: firstCategoryItem.route,
     }
   };
 };

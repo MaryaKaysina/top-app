@@ -1,42 +1,29 @@
 import { GetStaticProps } from 'next';
-import { useState } from 'react';
-import { Button, Input, Rating, Tag, Text, Textarea, Title } from '../components';
+import { Text, Title } from '../components';
 import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { IMenuItem } from '../interfaces/menu.interface';
 import { API } from '../helpers/api';
+import styles from './app.module.css';
+import { firstLevelMenu } from '../helpers/helper';
+import Link from 'next/link';
 
-function Home({ menu, firstCategory }: IHomeProps) {
-  const [rating, setRating] = useState<number>(4);
-  const [counter, setCounter] = useState<number>(0);
-
-  console.log(menu);
-  console.log(firstCategory);
+function Home() {
   return (
     <>
-      <Title>Курсы по Photoshop</Title>
-      <br/>
-      <Title>{ counter }</Title>
-      <br/>
-      <Button appearance='primary' onClick={() => setCounter(count => count + 1)}>
-        Узнать подробнее
-      </Button>
-      <Button appearance='primary' arrow = 'right'>Читать отзывы</Button>
-      <Button appearance='ghost' arrow = 'down'>Читать отзывы</Button>
-      <div style={ {height: "20px"} }></div>
-      <Text size='sm'>Выше указаны программы Adobe InDesign, Adobe Illustrator, Corel Draw и ими можно успешно пользоваться дома или в дороге. Современные ноутбуки хорошо справляются с нагрузкой, так зачем загонять специалиста в душный офис. В этой профессии важным считается вдохновение, поэтому дизайнеры ищут его в разных местах.</Text>
-      <br/>
-      <Tag color='gray'>10</Tag>
-      <Tag color='ghost' size='sm'>Дизайн</Tag>
-      <Tag color='green' size='sm'>-10 000 ₽</Tag>
-      <Tag color='red' href='https://hh.ru'>hh.ru</Tag>
-      <Tag color='primary' size='sm'>Работа в Photoshop</Tag>
-      <div style={ {height: "20px"} }></div>
-      <Rating rating={rating} isEditable setRating={setRating}/>
-      <div style={ {height: "20px"} }></div>
-      <Input placeholder='Имя'/>
-      <div style={ {height: "20px"} }></div>
-      <Textarea placeholder='Текст отзыва'/>
+      <Title className={styles.title}>Лучшие курсы онлайн</Title>
+      <Text size='sm' className={styles.text}>Подборки лучших курсов и рейтинги, основанные на реальных отзывах.</Text>
+      <ul className={styles.list}>
+      {firstLevelMenu.map(item => (
+        <li key={item.id} className={styles.item}>
+          <span className={styles.itemIcon}>{item.icon}</span>
+          <span className={styles.itemName}>{item.name}</span>
+          <span className={styles.itemLink}>
+            <Link href={`/${item.route}`} legacyBehavior>Показать все курсы</Link>
+          </span>
+        </li>
+      ))}
+      </ul>
     </>
   );
 }

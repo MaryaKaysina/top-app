@@ -21,7 +21,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property='og:url' content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}/>
         <meta property='og:locale' content="ru_RU"/>
-        <link key={1} rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link rel="preconnect" href="https://mc.yandex.ru" />

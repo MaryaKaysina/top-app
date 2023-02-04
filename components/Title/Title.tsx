@@ -1,8 +1,16 @@
+import cn from 'classnames';
 import { ITitleProps } from "./Title.props";
 import styles from './Title.module.css';
 
-export const Title = ({ As = 'h1', children }: ITitleProps) => {
+export const Title = ({ As = 'h1', children, className, ...props }: ITitleProps) => {
+  const classList = cn(
+    className,
+    [styles[`title--${As}`]]
+  );
+
   return (
-    <As className={styles[`title--${As}`]}>{children}</As>
+    <As className={classList} {...props}>
+      {children}
+    </As>
   );
 };
