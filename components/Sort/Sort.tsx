@@ -11,6 +11,7 @@ export const Sort = ({ sort = SortEnum.Rating, setSort, className, ...props }: I
         id="rating"
         onClick={() => setSort(SortEnum.Rating)}
         className={cn({ [styles.active]: sort ===  SortEnum.Rating})}
+        role="option"
         aria-selected={sort ===  SortEnum.Rating}
         aria-labelledby="sort rating"
       >
@@ -21,6 +22,7 @@ export const Sort = ({ sort = SortEnum.Rating, setSort, className, ...props }: I
         id="price"
         onClick={() => setSort(SortEnum.Price)}
         className={cn({ [styles.active]: sort ===  SortEnum.Price})}
+        role="option"
         aria-selected={sort ===  SortEnum.Price}
         aria-labelledby="sort price"
       >

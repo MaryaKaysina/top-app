@@ -46,12 +46,6 @@ export const Product = motion(forwardRef(({ product, className,...props }: IProd
             width={70} 
             height={70} 
           />
-          {/* <img
-            src={product.image.includes('http') ? '/no-image.svg' :`${process.env.NEXT_PUBLIC_DOMAIN}${product.image}`}
-            alt={product.title}
-            width={70} 
-            height={70} 
-          /> */}
         </div>
         <div className={styles.title}><Title As='h3'>{product.title}</Title></div>
         <div className={styles.price}>
@@ -137,6 +131,7 @@ export const Product = motion(forwardRef(({ product, className,...props }: IProd
           color={ColorEnum.blue} 
           className={styles.reviews} 
           tabIndex={isReviewOpened ? 0 : -1}
+          aria-hidden={isReviewOpened ? false : true}
         >
           {product.reviews.length > 0 && product.reviews.map(r => (
             <div key={r._id}>

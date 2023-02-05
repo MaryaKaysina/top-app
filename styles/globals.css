@@ -71,10 +71,11 @@ ul {
 
 .notFoundBlock {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	padding: 0 25px;
+	flex-direction: column;
+
 	margin: auto;
+	padding: 0 25px;
 }
 
 .notFoundBlock h1 {
@@ -83,13 +84,17 @@ ul {
 
 .notFoundBlock p {
 	margin-bottom: 50px;
+
 	color: var(--gray);
+
 	font-style: italic;
 }
 
 .notFoundBlock a {
-	text-decoration: underline;
 	transition: all 0.3s ease-in-out;
-	font-size: 14px;
+	text-decoration: underline;
+
 	color: var(--primary);
+
+	font-size: 14px;
 }

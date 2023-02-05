@@ -22,14 +22,14 @@ const Layout = ({ children }: ILayoutProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <a 
-        tabIndex={1} 
+      <button 
+        tabIndex={0} 
         className={cn(styles.skipLink, { [styles.displayed] : isSkipLinkDisplay })}
         onFocus={() => setIsSkipLinkDisplay(true)}
         onKeyDown={skipContentAction}
       >
         Сразу к содержанию
-      </a>
+      </button>
       <Header className={styles.header}/>
       <Sidebar className={styles.sidebar}/>
       <main className={styles.body} ref={bodyRef} tabIndex={0} role='main' >

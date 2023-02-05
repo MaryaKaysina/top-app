@@ -10,11 +10,7 @@ import { Title, Text } from '../../components';
 import { Error404 } from '../404';
 import Link from 'next/link';
 
-function Type({ firstCategory, menu, firstCategoryName, firstCategoryRoute }: ITypeProps) {
-
-  console.log(firstCategoryName);
-  console.log(menu);
-  console.log(firstCategory);
+function Type({ menu, firstCategoryName, firstCategoryRoute }: ITypeProps) {
 
   if (!menu || !firstCategoryName) {
     return <Error404/>;

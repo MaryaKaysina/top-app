@@ -1,81 +1,93 @@
 .title {
-  margin: 0 0 32px;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
+	margin: 0 0 32px;
+
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 48px;
 }
 
 .text {
-  margin-bottom: 40px;
-  max-width: 80%;
-  color: var(--gray);
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 120%;
+	max-width: 80%;
+	margin-bottom: 40px;
+
+	color: var(--gray);
+
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 120%;
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
 }
 
 .item {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
-  background: var(--white);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	padding: 30px;
+
+	border-radius: 5px;
+	background: var(--white);
+	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 }
 
 .itemIcon svg {
-  fill: var(--primary);
-  width: 50px;
+	fill: var(--primary);
+
+	width: 50px;
 }
 
 .itemName {
-  font-size: 32px;
-  font-weight: 600;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--gray-d2);
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+
+	text-align: center;
+
+	border-bottom: 1px solid var(--gray-d2);
+
+	font-size: 32px;
+	font-weight: 600;
 }
 
 .itemLink {
-  color: var(--primary);
-  font-size: 20px;
-  font-weight: 400;
+	color: var(--primary);
+
+	font-size: 20px;
+	font-weight: 400;
 }
 
 @media (max-width: 620px) {
-  .title {
-    margin: 0 0 15px;
-    font-size: 20px;
-  }
+	.title {
+		margin: 0 0 15px;
 
-  .text {
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
+		font-size: 20px;
+	}
 
-  .list {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
+	.text {
+		margin-bottom: 15px;
 
-  .item {
-    padding: 20px;
-  }
+		font-size: 16px;
+	}
 
-  .itemName {
-    font-size: 18px;
-  }
+	.list {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
 
-  .itemLink {
-    font-size: 16px;
-  }
+	.item {
+		padding: 20px;
+	}
+
+	.itemName {
+		font-size: 18px;
+	}
+
+	.itemLink {
+		font-size: 16px;
+	}
 }
