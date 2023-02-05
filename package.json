@@ -14,18 +14,18 @@
   },
   "dependencies": {
     "axios": "^1.2.2",
+    "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "framer-motion": "^8.5.5",
     "next": "13.1.1",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.0",
-    "react-yandex-metrika": "^2.6.0",
-    "prop-types": "^15.8.1"
+    "react-yandex-metrika": "^2.6.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
-    "@types/classnames": "^2.3.1",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "@next/font": "13.1.1",
