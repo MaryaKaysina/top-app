@@ -16,3 +16,5 @@
 `npm run build` - сборка для production 
 
 При добавлении коммитов husky правит стили согласно stylelint.
+
+## Demo - [top-app-mk](https://top-app-mk.netlify.app/)
